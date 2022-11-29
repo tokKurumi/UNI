@@ -1,0 +1,22 @@
+version: "3.8"
+
+services:
+  db:
+    container_name: "database"
+    image: postgres:latest
+    restart: always
+    environment:
+      POSTGRES_PASSWORD: "1fdf8vcd932h"
+      POSTGRES_USER: "kurumi"
+    ports:
+      - "5432:5432"
+
+  pgadmin:
+    container_name: "pgadmin"
+
+    image: dpage/pgadmin4:latest
+    ports:
+      - 80:80
+    environment:
+      PGADMIN_DEFAULT_EMAIL: tkurumi901@gmail.com
+      PGADMIN_DEFAULT_PASSWORD: 4usdf8h;qw_21+.
